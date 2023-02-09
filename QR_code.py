@@ -12,13 +12,14 @@ class App(ct.CTk):
         self.title("minimal example app")
         self.minsize(800, 500)
         self.title("QR code generator")
+        self.after(201, lambda :self.iconbitmap('qr-code.ico'))
 
         self.roboto_font = ct.CTkFont(family='Roboto', size=22, weight='bold')
 
         self.frame = ct.CTkFrame(master=self, width=800, height=500)
         self.frame.pack(padx=20, pady=20)
 
-        self.qr_image = ct.CTkButton(master=self.frame, width=400, height=400, text='Here will be a QR code!', hover=False, state="disabled", font=self.roboto_font)
+        self.qr_image = ct.CTkButton(master=self.frame, width=400, height=400, text='Here will be a QR code!', hover=False, font=self.roboto_font, text_color='white')
         self.qr_image.grid(row=0, column = 0, padx=(20, 0), pady=20)
 
         self.menu_frame = ct.CTkFrame(master=self.frame, width=300, height=500, fg_color='transparent')
