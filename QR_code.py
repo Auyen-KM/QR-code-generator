@@ -9,6 +9,7 @@ ct.set_default_color_theme("green")
 class App(ct.CTk):
     def __init__(self):
         super().__init__()
+        self.geometry("800x500+400+200")
         self.minsize(800, 500)
         self.title("QR code generator")
         self.after(201, lambda: self.iconbitmap("qr-code.ico"))
